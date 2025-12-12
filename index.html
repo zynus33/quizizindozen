@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizZen • Bahasa Indonesia Kelas 8</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div id="loginPage" class="page active">
+    <div class="login-box">
+      <h1>QuizZen</h1>
+      <p>Kuis Bahasa Indonesia Kelas 8 • 40 Soal Acak</p>
+      <input type="text" id="accessCode" placeholder="Masukkan kode akses" autocomplete="off">
+      <button id="enterBtn">MASUK</button>
+      <p id="errorMsg">Kode salah!</p>
+    </div>
+  </div>
+
+  <div id="quizPage" class="page">
+    <div class="container">
+      <header>
+        <div class="header-title">Bahasa Indonesia Kelas 8</div>
+        <div class="controls">
+          <div class="score">Skor: <span id="score">0</span></div>
+          <button class="btn-circle" id="musicBtn">Music</button>
+          <button class="btn-circle" id="soundBtn">Sound On</button>
+        </div>
+      </header>
+      <div class="question-container" id="questionContainer"></div>
+      <footer>Created by <strong>Zen</strong> • 2025</footer>
+    </div>
+  </div>
+
+  <div id="resultPage" class="page">
+    <h1 id="finalScore">400</h1>
+    <p id="message"></p>
+    <button id="restartBtn">Main Lagi</button>
+  </div>
+
+  <audio id="bgMusic" loop></audio>
+  <audio id="correctSound">
+    <source src="https://assets.mixkit.co/sfx/preview/mixkit-unlock-game-notification-253.mp3">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
